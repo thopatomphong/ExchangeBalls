@@ -64,5 +64,33 @@ class ExchangeBallsTests: XCTestCase {
         
         XCTAssertFalse(exchange.ballNumbers[4] == 10)
     }
+    
+    func testExchange1And8() {
+        var inputs = [(Ai:Int, Bi:Int)]()
+        inputs.append((1, 8))
+        
+        let result = exchange.exchangeBalls(N: 1, K: 1, inputs: inputs)
+        XCTAssertEqual("8 2 3 4 5 6 7 1", result)
+    }
+    
+    func testExchange2And2() {
+        var inputs = [(Ai:Int, Bi:Int)]()
+        inputs.append((2, 2))
+        
+        let result = exchange.exchangeBalls(N: 1, K: 1, inputs: inputs)
+        XCTAssertEqual("1 2 3 4 5 6 7 8", result) //Not Swap Same Value
+    }
+    
+    func testExample1() {
+        var inputs = [(Ai:Int, Bi:Int)]()
+        inputs.append((1, 2))
+        inputs.append((2, 3))
+        inputs.append((3, 4))
+        inputs.append((4, 1))
+        
+        let result = exchange.exchangeBalls(N: 4, K: 2, inputs: inputs)
+        
+        XCTAssertEqual("1 4 2 3 5 6 7 8", result)
+    }
 
 }
