@@ -30,22 +30,28 @@ class Exchange {
     }
     
     func exchangeBalls(N:Int, K:Int, inputs:[(Ai:Int, Bi:Int)]) -> String {
+        
         var result:String = ""
         
-        if (validateOperationsAndSets(N: N, K: K)) {
-            
-            //Swap Balls By Sets Times
-            for _ in 1...K {
-                for input in inputs {
-                    //Swap Balls
-                    swapBalls(input.Ai, input.Bi)
+        //Check Equal Operations And Inputs Times
+        if N == inputs.count {
+            if (validateOperationsAndSets(N: N, K: K)) {
+                
+                //Swap Balls By Sets Times
+                for _ in 1...K {
+                    for input in inputs {
+                        //Swap Balls
+                        swapBalls(input.Ai, input.Bi)
+                    }
                 }
+                
+                //Get Result Text
+                result = getResultText(ballNumbers)
+            } else {
+                result = "Incorrect Condition."
             }
-            
-            //Get Result Text
-            result = getResultText(ballNumbers)
         } else {
-            result = "Incorrect Condition"
+            result = "Invalid Input : Inputs And Sets Not Equal. Please Input Values Again."
         }
         
         return result
