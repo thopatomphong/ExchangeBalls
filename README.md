@@ -9,7 +9,7 @@ This app will help you calculate the results of the ball exchange.
 Exchange `A_Nth` ball from the left and `B_Nth` ball from the left.
 This series of N operations stated above will be one set.Output are arrangement of these balls after repeating K sets.
 
-###Input###Input will be given in the following format from Standard Input: 
+<h3>Input</h3>Input will be given in the following format from Standard Input: 
 
 ```
 NKA_1 B_1A_2 B_2
@@ -23,10 +23,10 @@ NKA_1 B_1A_2 B_2
 * On the following N lines, the operations to perform are given. Each line contains two integers `Ai`, `Bi` `(1≦Ai, Bi≦8, Ai≠Bi)` that represent the exchanges to be made. They are separated with a space.
 
 
-###Output###
+<h3>Output</h3>
 The output should be a single line with the number for each ball in their final order, with a space between each number.
 
-####Input Example####
+<h4>Input Example</h4>
 
 ```6 4
 
@@ -42,5 +42,5 @@ NKA_1 B_1A_2 B_2
 
 3 1
 ```
-####Output Example####
+<h4>Output Example</h4>
 `4 3 7 2 1 6 8 5`
